@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Monsterrat Bold";
+  src: url("./Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "Monsterrat Light";
+  src: url("./Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "Monsterrat Medium";
+  src: url("./Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Monsterrat Regular";
+  src: url("./Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Monsterrat SemiBold";
+  src: url("./Montserrat-SemiBold.ttf");
+}
+
+.font-700 {
+  font-family: "Monsterrat Bold" !important;
+  font-weight: 700;
+}
+.font-300 {
+  font-family: "Monsterrat Light" !important;
+  font-weight: 300;
+}
+.font-500 {
+  font-family: "Monsterrat Medium" !important;
+  font-weight: 500;
+}
+.font-400 {
+  font-family: "Monsterrat Regular" !important;
+  font-weight: 400;
+}
+.font-600 {
+  font-family: "Monsterrat SemiBold" !important;
+  font-weight: 600;
+}

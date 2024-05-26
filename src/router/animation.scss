@@ -1,0 +1,37 @@
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.notification {
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.online-notification {
+  background-color: #4caf50;
+}
+
+.offline-notification {
+  background-color: #f44336;
+}
+
+.online-notification,
+.offline-notification {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.app.offline .online-notification,
+.app.online .offline-notification {
+  opacity: 0;
+  transform: translateY(-20px);
+}

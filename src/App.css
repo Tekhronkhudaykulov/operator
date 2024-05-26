@@ -1,0 +1,55 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --body: #e5f3fd;
+  --footer: #2a2b36;
+  --purple: #5960fe;
+  --darkBlue: #000d84;
+  --lightPurple: rgba(89, 96, 254, 0.13);
+  --red: #ff0000;
+  --gray: #b5b5b5;
+  --textGray: #d9d9d9;
+  --warning: #ff1f1f;
+  --green: #22bc79;
+}
+
+body {
+  width: 100%;
+  background-color: white;
+}
+
+#root {
+  width: 100%;
+}
+
+* {
+  font-family: "Monsterrat SemiBold";
+  font-size: 15px;
+}
+
+.wrapper {
+  min-width: 95%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ant-btn-primary {
+  background: var(--purple) !important;
+}
+
+.ant-btn-primary span {
+  color: var(--white) !important;
+}
+
+.ant-btn-default span {
+  color: var(--purple) !important;
+}
+
+button span {
+  font-family: "Monsterrat Bold" !important;
+}
+
+button svg {
+  fill: #fff;
+}

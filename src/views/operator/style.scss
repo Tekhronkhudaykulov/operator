@@ -1,0 +1,10 @@
+.imgBanner {
+  background-image: url("../../assets/images/Dxxx.png");
+  background-repeat: no-repeat;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+}
