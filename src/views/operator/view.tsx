@@ -1,5 +1,5 @@
 // import Operator from "../../../public/Operator.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../../assets/images/img_gai.png";
 import { appStore } from "../../store";
 import QueueCard from "../../components/queueCard";
@@ -31,6 +31,28 @@ const Home = () => {
   }, []);
 
   const navigate = useNavigate();
+
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [isDisabledBg, setIsDisabledBg] = useState(false);
+
+  console.log(isDisabled);
+
+  const handleClick = () => {
+    operatorSendData().then((res) => {
+      if (res.message !== "success") {
+        message.info({ content: "Hozigi vaqtda navbat yoq!" });
+      }
+      getCurrentQue().then(() => {
+        getQueCount();
+      });
+      setIsDisabled(true);
+      setIsDisabledBg(true);
+      setTimeout(() => {
+        setIsDisabled(false);
+        setIsDisabledBg(false);
+      }, 15000); // 30 sekund
+    });
+  };
 
   return (
     <>
@@ -81,18 +103,14 @@ const Home = () => {
               </div>
               <div className="grid">
                 <Button
+                  disabled={isDisabled}
                   variant="outlined"
-                  className="!bg-[#DB0000] uppercase !text-white  h-[100%] W-[100%] !text-[40px] !font-bold"
-                  onClick={() => {
-                    operatorSendData().then((res) => {
-                      if (res.message !== "success") {
-                        message.info({ content: "Hozigi vaqtda navbat yoq!" });
-                      }
-                      getCurrentQue().then(() => {
-                        getQueCount();
-                      });
-                    });
-                  }}
+                  className={
+                    isDisabledBg
+                      ? "!bg-[gray] uppercase !text-white  h-[100%] W-[100%] !text-[40px] !font-bold"
+                      : "!bg-[#DB0000] uppercase !text-white  h-[100%] W-[100%] !text-[40px] !font-bold"
+                  }
+                  onClick={handleClick}
                   endIcon={<ArrowForwardIcon className="!text-[52px] ml-4" />}
                 >
                   {listLoadingForSend ? "Loading..." : " Keyingi/Следующий"}
