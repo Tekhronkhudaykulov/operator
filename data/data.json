@@ -1,7 +1,7 @@
 {
   "deviceName": "kiosk",
-  "email": "Kassa1",
+  "email": "gvardeyskiy_foto",
   "password": "1111",
-  "ip": "http://84.54.75.134:8283/api",
-  "token": "6854|scdU72wBGLdUIEipXQFjqMxbCnLReLBlRqnHJD57e5027424"
+  "ip": "https://api.ecohimoya.uz/api",
+  "token": "5672|1gH5so5girrw45KcIAUQeixzjYIfzaL260mO9ovW09f3e6f2"
 }

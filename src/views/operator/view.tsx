@@ -1,6 +1,6 @@
 // import Operator from "../../../public/Operator.png";
 import { useEffect, useState } from "react";
-import Logo from "../../assets/images/img_gai.png";
+import Logo from "../../assets/images/Dxxx.png";
 import { appStore } from "../../store";
 import QueueCard from "../../components/queueCard";
 import "./style.scss";
@@ -34,8 +34,6 @@ const Home = () => {
 
   const [isDisabled, setIsDisabled] = useState(false);
   const [isDisabledBg, setIsDisabledBg] = useState(false);
-
-  console.log(isDisabled);
 
   const handleClick = () => {
     operatorSendData().then((res) => {
